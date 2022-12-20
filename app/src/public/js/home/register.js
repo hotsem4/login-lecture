@@ -10,9 +10,9 @@ registerBtn.addEventListener('click', register);
 console.log(id);
 
 function register() {
-  if (psword.value !== confirmPsword.value) {
+  if (!id.value) return alert('아이디를 입력하시오.');
+  if (psword.value !== confirmPsword.value)
     return alert('비밀번호가 일치하지 않습니다.');
-  }
 
   const req = {
     name: name.value,
