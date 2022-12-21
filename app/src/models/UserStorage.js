@@ -7,8 +7,9 @@ class UserStorage {
     return new Promise((resolve, reject) => {
       const query = 'SELECT * FROM users WHERE id = ?;';
       db.query(query, [id], (err, data) => {
+        console.log(err);
         if (err) reject(`${err}`);
-        console.log(data[0]);
+        // console.log(data[0]);
         resolve(data[0]);
       });
     });

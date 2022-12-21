@@ -5,7 +5,7 @@ const id = document.querySelector('#id'),
   loginBtn = document.querySelector('#button');
 
 loginBtn.addEventListener('click', login);
-console.log(id);
+// console.log(id);
 
 function login() {
   const req = {
